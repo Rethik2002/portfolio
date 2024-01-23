@@ -1,0 +1,44 @@
+.footer {
+  /* width: 100vw; */
+  background-color: var(--clr-rose);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+  min-height: 40vh;
+}
+.contacts {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+.contact_icon {
+  color: white;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.contact_icon:hover {
+  transform: scale(1.3) translateY(3px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+.contact_icon:active {
+  color: black;
+}
+.love {
+  color: rgb(238, 238, 0);
+}
+@media screen and (max-width: 1024px) {
+  .footer {
+    min-height: 30vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact_icon {
+    font-size: 2rem;
+    padding: 0;
+  }
+}

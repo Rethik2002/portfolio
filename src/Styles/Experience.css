@@ -1,0 +1,10 @@
+#experience {
+  text-align: center;
+}
+.experience_title {
+}
+.each_experience {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

@@ -1,0 +1,31 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.about_desc {
+  max-width: 70ch;
+}
+#about_img {
+  width: 20rem;
+  height: 22rem;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about_desc {
+    max-width: 45ch;
+  }
+  #about_img {
+    width: 15rem;
+    height: 17rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #about_img {
+    display: none;
+  }
+}

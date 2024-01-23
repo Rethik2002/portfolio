@@ -1,0 +1,143 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+#Hero_img {
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 2rem;
+}
+.socials a:hover {
+  transform: scale(1.24);
+}
+.home_resume {
+  display: none;
+}
+.hero_desc {
+  max-width: 60ch;
+}
+.mouse {
+  margin-top: 4rem;
+  width: 25px;
+  height: 45px;
+  border: 3px solid var(--clr-rose);
+  border-radius: 60px;
+  position: relative;
+}
+.mouse::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-slate400);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+.wrapper {
+  display: flex;
+}
+.wrapper .static-txt {
+  color: var(--clr-slate400);
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: var(--clr-rose);
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  border-left: 2px solid var(--clr-rose);
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Hero {
+    gap: 0.4rem;
+    justify-content: space-around;
+  }
+  #Hero_img {
+    width: 18rem;
+    height: 18rem;
+    margin-top: -3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #Hero_img {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .home_resume {
+    display: block;
+  }
+  .mouse {
+    display: none;
+  }
+}
